@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wypozyczalnia</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class = "navbar navbar-fixed-top navbar-default">
+    <div class="container">
+      <%= link_to "MojeFilmy", "", class: "btn btn-lg btn-success", id:"logo" %>
+      <div class = "nav_item">
+        
+        <%= link_to "link_1", "", class: "btn btn-default btn-warning" %>
+      </div>
+            <div class = "nav_item">
+        <%= link_to "link_1", "", class: "btn btn-default btn-warning" %>
+      </div>
+            <div class = "nav_item">
+        <%= link_to "link_1", "", class: "btn btn-default btn-warning" %>
+      </div>
+      <form class ="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Szukaj filmu">
+          
+          </div>
+        <button type="button" span class="glyphicon glyphicon-search"></button>
+      </form>
+    </div>
+    
+  </header>
+<div class="container">
+<%= yield %>
+<div class="footer">
+  <p>&copy; MojeFilmy 2015</p>
+</div>
+</div>
+</body>
+</html>
