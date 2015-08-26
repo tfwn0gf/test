@@ -1,0 +1,17 @@
+<%= render 'shared/errors', obj: @movie %>
+
+
+<div class="row">
+  <div class="well col-md-8 col-md-offset-2">
+    <%= form_for @movie do |f| %>
+    <%= f.label :Nazwa %>
+    <%= f.text_field :name %>
+    
+    
+    <%= f.label :Ocena %>
+    <%= f.text_field :rating %>
+    <%= f.submit(@movie.new_record? ? 'Dodaj film': 'Edit Recipe', class: "btn btn-success") %>
+    <% end %>
+  </div>
+  
+</div>

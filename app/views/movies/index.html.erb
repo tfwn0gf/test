@@ -1,0 +1,24 @@
+<p>
+<%= render 'shared/page_title', title: "Filmy" %>
+</p>
+<% @movies.each do |r| %>
+  <div class="row">
+    
+    <div class="col-md-2">
+      <section class ="user_info center">
+        <h5>Dodane przez: <%= r.user.username.capitalize %></h5>
+        
+      </section>
+    </div>
+    
+    <div class="col-lg-8 well">
+      <h4><%= link_to r.name, movie_path(r) %></h4>
+      <p>Ocena: <%= r.rating %>/10</p>
+      <p>
+        <span class="quiet"><small><%= time_ago_in_words(r.created_at) %> ago </small></span>
+      </p>
+    </div>
+    
+    
+  </div>
+<% end %>
