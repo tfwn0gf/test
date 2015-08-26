@@ -1,6 +1,8 @@
 <%= render 'shared/page_title', title: @movie.name %>
 <small>dodane przez: <%= @movie.user.username.capitalize %></small>
-
+<div class = "show_movie">
+<%= image_tag(@movie.picture.url) if @movie.picture? %>
+</div>
 
 <h5><%= link_to "Powrot", movies_path, class: "btn btn-warning btn-small"%></h5>
 <%= link_to "Edytuj", edit_movie_path(@movie), class: "btn btn-success pull-right" %>
